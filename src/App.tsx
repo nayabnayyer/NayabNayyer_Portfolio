@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { SelectedWork } from './components/SelectedWork';
@@ -7,36 +7,30 @@ import { SkillsSection } from './components/SkillsSection';
 import { ExperienceEducation } from './components/ExperienceEducation';
 import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
-import { ResumeModal } from './components/ResumeModal';
 import { Footer } from './components/Footer';
 
 export default function App() {
-  const [isResumeOpen, setIsResumeOpen] = useState(false);
-
+       const openResume = () => {
+       window.open('/Nayab_Nayyer_AI_ML_Resume.pdf', '_blank');
+};
   return (
     <div className="min-h-screen bg-[#0D0F10] text-[#F2F2EF] selection:bg-[#6FA7A3]/30 selection:text-[#F2F2EF]">
       {/* Top Sticky Navigation */}
-      <Navbar onOpenResume={() => setIsResumeOpen(true)} />
+      <Navbar onOpenResume={openResume} />
 
       {/* Main Content Layout */}
       <main>
-        <Hero onOpenResume={() => setIsResumeOpen(true)} />
+        <Hero onOpenResume={openResume} />
         <SelectedWork />
         <WhatIBuild />
         <SkillsSection />
         <ExperienceEducation />
         <AboutSection />
-        <ContactSection onOpenResume={() => setIsResumeOpen(true)} />
+        <ContactSection onOpenResume={openResume} />
       </main>
 
       {/* Minimal Footer */}
       <Footer />
-
-      {/* Interactive Printable / ATS Resume Modal */}
-      <ResumeModal
-        isOpen={isResumeOpen}
-        onClose={() => setIsResumeOpen(false)}
-      />
     </div>
   );
 }

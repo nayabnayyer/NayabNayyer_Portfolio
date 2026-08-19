@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
       'Random Forest regressor optimization with hyperparameter tuning',
       'Deployed interactive Streamlit interface for instant real-time cost estimation',
     ],
-    githubUrl: 'https://github.com/nayabnayyer',
+    githubUrl: 'https://github.com/nayabnayyer/MedPredictPro-Medical_Cost_Prediction_Web_Application',
     conferenceNote: {
       event: 'International Science Conference 2025',
       role: 'Poster Presenter',

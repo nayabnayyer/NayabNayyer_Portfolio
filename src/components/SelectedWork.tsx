@@ -160,7 +160,7 @@ export const SelectedWork: React.FC = () => {
             
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/nayabnayyer"
+                href="https://github.com/nayabnayyer/MedPredictPro-Medical_Cost_Prediction_Web_Application"
                 target="_blank"
                 rel="noreferrer"
                 id="medpredict-github-link"
